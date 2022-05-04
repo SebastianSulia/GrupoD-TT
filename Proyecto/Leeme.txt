@@ -1,35 +1,37 @@
 Metodología de Investigación
 Tecnicatura Superior en Programación - 2022
 
+PROYECTO DE PROGRAMACIÓN
+
 Integrantes:
 - Chiófalo, María Emilia 
 - Sponton, Giani
-- Sulía, Sebastián
+- Suliá, Sebastián
 
-PROYECTO DE PROGRAMACIÓN
-Título: "Optimización del proceso de cálculo del porcentaje de color de un documento PDF."
+Título: "Optimización del proceso de cálculo del porcentaje de color de un archivo para su impresión."
 Lenguaje: Python
 Entorno: PyCharm
 
 RESUMEN
-El objetivo del proyecto es desarrollar una aplicación que resuelva un problema 
-específico en el ámbito comercial de un negocio. El negocio es una librería y fotocopiadora
-donde, en el día a día, se ve dificultado el cálculo del precio de las impresiones a color.
-Actualmente, los empleados de la librería calculan el precio estimando el porcentaje de color 
-ocupado en la impresión. Este proceso de sumar hoja por hoja la estimación, toma mucho tiempo
-y resulta en valores diferentes según quién saque la cuenta, imposibilitando la obejtividad
-al momento de cobrar. El programa a desarrollar resolvería tanto la velocidad como la 
-objetividad del cálculo de dicho precio.
+El objetivo del proyecto es desarrollar una aplicación que resuelva un problema específico 
+en el ámbito comercial de un negocio. El negocio es una librería y fotocopiadora donde, 
+en el día a día, se ve dificultado el cálculo del precio de las impresiones a color. Actualmente, 
+los empleados de la librería calculan el precio estimando el porcentaje de color ocupado en la 
+impresión. Este proceso de sumar hoja por hoja la estimación, toma mucho tiempo y resulta en 
+valores diferentes según quién saque la cuenta, imposibilitando la objetividad al momento de 
+cobrar. El programa a desarrollar resolvería tanto la velocidad como la objetividad del cálculo 
+de dicho precio.
 
 El programa constaría, en un principio, de un módulo encargado de recibir el archivo en formato
 PDF o JPG y, de ser necesario, transformarlo a un formato con el cuál se pueda realizar un 
-análisis de pixel (posiblemente JPG u otro formato de imagen); de un módulo encargado de 
-realizar dicho análisis y devolver el porcentaje de cobertura de color de cada página; de un 
-módulo encargado de recibir los precios de los insumos y calcular el precio final de cada página
-y del documento en total; y finalmente, la interfaz gráfica que facilitará la carga de archivos,
-la carga de los precios de los insumos y la salida de datos. 
+análisis de pixel (posiblemente JPG u otro formato de imagen); de un módulo para ajustar la 
+imagen en la hoja, ya sea, ocupando la totalidad de una hoja A5, la mitad, dos imágenes por hoja,
+etc.; de un módulo encargado de realizar el análisis de pixel y de devolver el porcentaje de 
+cobertura de color de cada página; de un módulo encargado de recibir los precios de los insumos 
+y calcular el precio final de cada página y del documento en total; ; y finalmente, la interfaz 
+gráfica que facilitará la carga de archivos, la carga de los precios de los insumos y la salida 
+de datos. 
 
-Adicionalmente, en el caso de que se dé la posibilidad, se planificará la incorporación de
-otro módulos, como pueden ser: conversión de imagen a escala de grises, CMYK, ajustar la imagen 
-al tamaño de la hoja predeterminada, etc.
+Adicionalmente, se podría planificar la incorporación de otros módulos, como pueden ser: conversión 
+de imagen a escala de grises, conversión a colores CMYK, mapas de color, etc.
  
