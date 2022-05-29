@@ -19,12 +19,12 @@ class ConfigFrame(ttk.Frame):
         self.costo_papel_entry = tk.Entry(self)
         self.costo_papel_entry.grid(row=3, column=2)
 
-        self.servicio_tecnico = tk.Label(self, text="Costo tinta", fg="white")
+        self.servicio_tecnico = tk.Label(self, text="Servicio Tecnico", fg="white")
         self.servicio_tecnico.grid(row=4, column=1)
         self.servicio_tecnico_entry = tk.Entry(self)
         self.servicio_tecnico_entry.grid(row=4, column=2)
 
-        self.ganancia = tk.Label(self, text="Costo tinta", fg="white")
+        self.ganancia = tk.Label(self, text="Ganancia", fg="white")
         self.ganancia.grid(row=5, column=1)
         self.ganancia_entry = tk.Entry(self)
         self.ganancia_entry.grid(row=5, column=2)
@@ -33,7 +33,7 @@ class ConfigFrame(ttk.Frame):
         self.boton_guardar.grid(row=6, column=1)
 
         self.boton_reset = tk.Button(self, text="Predeterminado", command=self.reset)
-        self.boton_reset.grid(row=6, column=3)
+        self.boton_reset.grid(row=6, column=2, sticky="e")
 
     def reset(self):
         print("reset")

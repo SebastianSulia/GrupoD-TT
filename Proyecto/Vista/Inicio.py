@@ -1,7 +1,10 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
+import pdf2image as pdf2image
 
+import Modelo.ArchivoService
+from Modelo import *
 
 class InicioFrame(ttk.Frame):
     def __init__(self, *args, **kwargs):
@@ -18,11 +21,18 @@ class InicioFrame(ttk.Frame):
         # -----------------------------
         self.boton_ejecutar= tk.Button(self, text="Ejecutar", command=self.ejecutar)
         self.boton_ejecutar.pack(pady=2)
+        # -----------------------------
+        self.detalle = tk.Text(self, height=10, width=40)
 
     def buscar(self):
         archivo = filedialog.askopenfilename(title="Buscar")
         self.url.insert(0, archivo)
+        self.detalle.pack_forget()
         print(archivo)
 
     def ejecutar(self):
         print(self.url.get())
+        Modelo.ArchivoService.entrada_archivo(self.url.get())
+        self.detalle.pack()
+
+
