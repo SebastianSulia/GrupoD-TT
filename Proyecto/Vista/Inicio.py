@@ -32,7 +32,14 @@ class InicioFrame(ttk.Frame):
 
     def ejecutar(self):
         print(self.url.get())
-        Modelo.ArchivoService.entrada_archivo(self.url.get())
+        info = Modelo.ArchivoService.entrada_archivo(self.url.get())
+        self.detalle.insert("insert", self.escribir_info(info))
         self.detalle.pack()
+
+    def escribir_info(self, info):
+        string = "Nombre archivo: " + str(info[0]) + "\n" + "Numero de paginas: " + str(info[1]) + "\n" + "Precio: $" + str(info[2]) + "\n"
+        return string
+
+
 
 

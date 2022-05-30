@@ -25,7 +25,7 @@ def entrada_archivo(path):
         print("algo")
     finally:
         #borrar los archivos en el directorio Temp
-        path_list = Path(r"C:\Proyecto\Proyecto\Temp").glob('**/*.ppm')
+        path_list = Path(r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Temp").glob('**/*.ppm')
         for path in path_list:
             os.remove(path)
 
@@ -33,9 +33,9 @@ def entrada_archivo(path):
 
 def leerpdf(PDFpath,archivo,config):
     images_from_path = pdf2image.convert_from_path(PDFpath,
-                                                   output_folder=r"C:\Proyecto\Proyecto\Temp")
+                                                   output_folder=r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Temp")
     # devuelve una lista con todos los archivos dentro del directorio
-    pathlist = Path(r"C:\Proyecto\Proyecto\Temp").glob('**/*.ppm')
+    pathlist = Path(r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Temp").glob('**/*.ppm')
     for path in pathlist:
         print(path)
         #llamar al metodo de analisis de pixel enviando el path como source
