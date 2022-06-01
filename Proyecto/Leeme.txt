@@ -34,4 +34,6 @@ de datos.
 
 Adicionalmente, se podría planificar la incorporación de otros módulos, como pueden ser: conversión 
 de imagen a escala de grises, conversión a colores CMYK, mapas de color, etc.
+
+https://miro.com/app/board/uXjVO1PXYVk=/
  
