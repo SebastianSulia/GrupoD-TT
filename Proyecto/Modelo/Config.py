@@ -8,7 +8,7 @@ class Config:
         self.precio_final_full: float = 0.0
 
     def set_valores_iniciales(self):
-        self.costoTinta = 1500
+        self.costoTinta = 1650
         self.costoPapel = 650
         self.servicioTecnico = 8000
         self.ganancia = 3.3

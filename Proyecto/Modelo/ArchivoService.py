@@ -32,7 +32,7 @@ def entrada_archivo(path):
         print("final")
 
 def leerpdf(PDFpath,archivo,config):
-    images_from_path = pdf2image.convert_from_path(PDFpath,
+    images_from_path = pdf2image.convert_from_path(PDFpath, dpi=72, size=(595, None),
                                                    output_folder=r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Temp")
     # devuelve una lista con todos los archivos dentro del directorio
     pathlist = Path(r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Temp").glob('**/*.ppm')
