@@ -1,10 +1,12 @@
+import tkinter
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
-import pdf2image as pdf2image
+from datetime import datetime
 
 import Modelo.ArchivoService
 from Modelo import *
+
 
 class InicioFrame(ttk.Frame):
     def __init__(self, *args, **kwargs):
@@ -19,7 +21,7 @@ class InicioFrame(ttk.Frame):
         self.boton_buscar = tk.Button(self, text="Buscar", command=self.buscar)
         self.boton_buscar.pack(pady=2)
         # -----------------------------
-        self.boton_ejecutar= tk.Button(self, text="Ejecutar", command=self.ejecutar)
+        self.boton_ejecutar = tk.Button(self, text="Ejecutar", command=self.ejecutar)
         self.boton_ejecutar.pack(pady=2)
         # -----------------------------
         self.detalle = tk.Text(self, height=10, width=40)
@@ -28,6 +30,8 @@ class InicioFrame(ttk.Frame):
         archivo = filedialog.askopenfilename(title="Buscar")
         self.url.insert(0, archivo)
         self.detalle.pack_forget()
+
+        self.borrar_detalle()
         print(archivo)
 
     def ejecutar(self):
@@ -36,10 +40,23 @@ class InicioFrame(ttk.Frame):
         self.detalle.insert("insert", self.escribir_info(info))
         self.detalle.pack()
 
+        self.guardar_en_historial(info)
+        self.borrar_path()
+
     def escribir_info(self, info):
-        string = "Nombre archivo: " + str(info[0]) + "\n" + "Numero de paginas: " + str(info[1]) + "\n" + "Precio: $" + str(info[2]) + "\n"
+        string = str(datetime.now().date()) + "\n" + "Nombre archivo: " + str(info[0]) + "\n" + "Numero de paginas: " + str(
+            info[1]) + "\n" + "Precio: $" + str(info[2]) + "\n"
         return string
 
+    def borrar_path(self):
+        self.url.delete(0, tk.END)
 
+    def borrar_detalle(self):
+        self.detalle.delete(1.0, tk.END)
 
-
+    def guardar_en_historial(self, info):
+        fichero = open(
+            r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/history.txt",
+            'a')
+        fichero.write(self.escribir_info(info) + '\n')
+        fichero.close()

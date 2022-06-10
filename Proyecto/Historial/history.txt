@@ -1,0 +1,33 @@
+Nombre archivo: Untitled1.pdf
+Numero de paginas: 2
+Precio: $57
+>
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 4
+Precio: $73
+>
+2022-06-10
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 2
+Precio: $15
+
+2022-06-10
+Nombre archivo: prueba2pags.pdf
+Numero de paginas: 2
+Precio: $15
+>
+2022-06-10
+Nombre archivo: Untitled1.pdf
+Numero de paginas: 2
+Precio: $57
+
+2022-06-10
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 4
+Precio: $73
+
+2022-06-10
+Nombre archivo: Untitled1.pdf
+Numero de paginas: 6
+Precio: $130
+

@@ -12,10 +12,10 @@ class HistorialFrame(ttk.Frame):
         self.historial = tk.Text(self)
         self.historial.pack()
 
-        #self.atrapa_texto()
+        self.atrapa_texto()
 
-    # def atrapa_texto(self):
-    #     f = open('prueba.txt', 'r')
-    #     mensaje = f.read()
-    #     f.close()
-    #     self.historial.insert(1.0, mensaje)
+    def atrapa_texto(self):
+        f = open(r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/history.txt", 'r')
+        mensaje = f.read()
+        f.close()
+        self.historial.insert(1.0, mensaje)
