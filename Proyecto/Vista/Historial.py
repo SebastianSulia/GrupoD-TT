@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from tkinter import ttk
 
@@ -15,7 +16,7 @@ class HistorialFrame(ttk.Frame):
         self.atrapa_texto()
 
     def atrapa_texto(self):
-        f = open(r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/history.txt", 'r')
+        f = open(os.path.dirname(__file__).replace("Vista", "Historial") + "/history.txt", 'r')
         mensaje = f.read()
         f.close()
         self.historial.insert(1.0, mensaje)

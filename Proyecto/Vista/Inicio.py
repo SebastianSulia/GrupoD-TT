@@ -1,3 +1,4 @@
+import os
 import tkinter
 import tkinter as tk
 from tkinter import ttk
@@ -56,7 +57,7 @@ class InicioFrame(ttk.Frame):
 
     def guardar_en_historial(self, info):
         fichero = open(
-            r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/history.txt",
+            os.path.dirname(__file__).replace("Vista", "Historial") + "/history.txt",
             'a')
         fichero.write(self.escribir_info(info) + '\n')
         fichero.close()

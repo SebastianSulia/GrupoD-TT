@@ -1,3 +1,6 @@
+import os
+
+
 class Config:
     def __init__(self):
         self.costoTinta: float = 0.0
@@ -25,7 +28,7 @@ def set_valores_reset():
 
 def guardar_config(datos):
     fichero = open(
-        r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/config.txt",
+        os.path.dirname(__file__).replace("Modelo", "Historial") + "/config.txt",
         'w')
     fichero.write(datos)
     fichero.close()
@@ -33,7 +36,7 @@ def guardar_config(datos):
 
 def get_config():
     f = open(
-        r"/Users/sebastiansulia/Documents/Tecnicatura_programacion/Semestre2/Metodología/Proyecto/Repos/GrupoD-TT/Proyecto/Historial/config.txt",
+        os.path.dirname(__file__).replace("Modelo", "Historial") + "/config.txt",
         'r')
     text = f.read()
     f.close()

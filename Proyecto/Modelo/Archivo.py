@@ -1,9 +1,12 @@
 
 class Archivo:
+    def __init__(self):
+        self.paginas = []
+        self.costo: float = 0.0
+        self.precio: int = 0
 
-    paginas = []
-    costo: float = 0.0
-    precio: int = 0
+    def __del__(self):
+        print("")
 
     def add_pagina(self,pagina):
         getattr(self,'paginas',self.paginas.append(pagina))
@@ -20,3 +23,8 @@ class Archivo:
     def calcular_costo_pag(self,cobertura_pag,config):
         costo_pag = cobertura_pag * getattr(config,'costo_final_full') / 100
         return costo_pag
+
+    def resert_archivo(self):
+        self.paginas = []
+        self.costo = 0.0
+        self.precio = 0
