@@ -22,3 +22,40 @@ Precio imagen A4:
 $52
 Precio imagen A5:
 $26
+2022-06-13
+Nombre archivo: WhatsApp Image 2022-06-13 at 10.04.56 PM (1).jpeg
+Precio imagen A4:
+$52
+Precio imagen A5:
+$26
+2022-06-13
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 0
+Precio: $0
+
+2022-06-13
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 0
+Precio: $0
+
+2022-06-13
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 0
+Precio: $0
+
+2022-06-13
+Nombre archivo: mementopython3-espanol.pdf
+Numero de paginas: 2
+Precio: $15
+
+2022-06-13
+Nombre archivo: Untitled1.pdf
+Numero de paginas: 2
+Precio: $57
+
+2022-06-13
+Nombre archivo: WhatsApp Image 2022-06-13 at 8.03.31 PM.jpeg
+Precio imagen A4:
+$42
+Precio imagen A5:
+$21

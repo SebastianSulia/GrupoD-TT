@@ -34,7 +34,7 @@ def entrada_archivo(path):
         #print("algo")
     finally:
         # borrar los archivos en el directorio Temp
-        path_list = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('**/.*')
+        path_list = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('**/*.*')
         for path in path_list:
             os.remove(path)
 
@@ -45,7 +45,7 @@ def analizarpdf(PDFpath, archivo, config):
     images_from_path = pdf2image.convert_from_path(PDFpath, dpi=72, size=(595, None),
                                                    output_folder=os.path.dirname(__file__).replace("Modelo", "Temp"))
     # devuelve una lista con todos los archivos dentro del directorio
-    pathlist = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('*/.ppm')
+    pathlist = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('**/*.ppm')
 
     for path in pathlist:
         #print(path)
