@@ -14,14 +14,14 @@ def entrada_archivo(path):
     config.set_valores_iniciales()
     path = Path(path)
     try:
-        print("hola")
+        #print("hola")
         if path.suffix == '.pdf':
             archivo = Archivo.Archivo()
             info = analizarpdf(path, archivo, config)
             return info
         else:
             try:
-                print("hola, hola")
+                #print("hola, hola")
                 imagen = Imagen()
                 info_imagen = analizarImagen(path, imagen, config)
                 return info_imagen
@@ -31,36 +31,36 @@ def entrada_archivo(path):
     except Exception as e:
         # imprimir en pantalla "formato no compatible"
         print(e)
-        print("algo")
+        #print("algo")
     finally:
         # borrar los archivos en el directorio Temp
-        path_list = Path(os.path.dirname(_file_).replace("Modelo", "Temp")).glob('*/.*')
+        path_list = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('**/.*')
         for path in path_list:
             os.remove(path)
 
-        print(os.path.dirname(_file_).replace("Modelo", "Temp"))
+        #print(os.path.dirname(__file__).replace("Modelo", "Temp"))
 
 
 def analizarpdf(PDFpath, archivo, config):
     images_from_path = pdf2image.convert_from_path(PDFpath, dpi=72, size=(595, None),
-                                                   output_folder=os.path.dirname(_file_).replace("Modelo", "Temp"))
+                                                   output_folder=os.path.dirname(__file__).replace("Modelo", "Temp"))
     # devuelve una lista con todos los archivos dentro del directorio
-    pathlist = Path(os.path.dirname(_file_).replace("Modelo", "Temp")).glob('*/.ppm')
+    pathlist = Path(os.path.dirname(__file__).replace("Modelo", "Temp")).glob('*/.ppm')
 
     for path in pathlist:
-        print(path)
+        #print(path)
         # llamar al metodo de analisis de pixel enviando el path como source
         datospagina = analisis_pixel_BGR(path)
-        print(datospagina)
+        #print(datospagina)
         pagina = Pagina(alto=datospagina[0], ancho=datospagina[1], cobertura=datospagina[2])
-        print(str(pagina))
+        #print(str(pagina))
         archivo.add_pagina(pagina)
 
-    print(str(archivo))
+    #print(str(archivo))
     archivo.calcular_precio_archivo(config)
-    print(getattr(archivo, 'precio'))
+    #print(getattr(archivo, 'precio'))
     info = [os.path.basename(PDFpath), len(archivo.paginas), getattr(archivo, 'precio')]
-    print(str(info))
+    #print(str(info))
     return info
 
 
@@ -72,5 +72,5 @@ def analizarImagen(ImgPath, imagen, config):
     imagen.calcular_precio_imagenA4(config)
     imagen.calcular_precio_imagenA5(config)
     info = [os.path.basename(ImgPath), "Precio imagen A4:", getattr(imagen, 'precioA4'), "Precio imagen A5:", getattr(imagen, 'precioA5')]
-    print(info)
+    #print(info)
     return info

@@ -33,10 +33,10 @@ class InicioFrame(ttk.Frame):
         self.detalle.pack_forget()
 
         self.borrar_detalle()
-        print(archivo)
+        #print(archivo)
 
     def ejecutar(self):
-        print(self.url.get())
+        #print(self.url.get())
         info = Modelo.ArchivoService.entrada_archivo(self.url.get())
         if(info != None):
             self.detalle.insert("insert", self.escribir_info(info))

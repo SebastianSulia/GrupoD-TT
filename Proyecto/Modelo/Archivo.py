@@ -5,9 +5,6 @@ class Archivo:
         self.costo: float = 0.0
         self.precio: int = 0
 
-    def __del__(self):
-        print("")
-
     def add_pagina(self,pagina):
         getattr(self,'paginas',self.paginas.append(pagina))
 
@@ -15,7 +12,7 @@ class Archivo:
         costo = 0
         for pag in self.paginas:
             costo += self.calcular_costo_pag(getattr(pag,'cobertura'), config)
-            print(costo)
+            #print(costo)
         self.costo = costo
         precio = costo * getattr(config, 'ganancia')
         self.precio = int(precio)

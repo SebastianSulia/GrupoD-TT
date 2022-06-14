@@ -1,7 +1,6 @@
 import cv2
 import os.path
 from PIL import Image
-from Modelo.Imagen import *
 
 
 def analisis_pixel_BGR(path):
@@ -30,16 +29,16 @@ def analisis_pixel_BGR_Imagen(imagen, path):
         #impresionA4
         if im1.width>im1.height:
             im1.thumbnail((842, 595))
-            im1.save(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+            im1.save(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
         else:
             im1.thumbnail((595, 842))
-            im1.save(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+            im1.save(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
 
         cantPixA4 = 842*595
         cantPixSobra = cantPixA4 - (im1.height*im1.width)
         porcentajePixBlancosHj = cantPixSobra*100/cantPixA4
 
-        im = cv2.imread(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+        im = cv2.imread(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
 
         #analisis pixel
         contB = 0
@@ -57,16 +56,16 @@ def analisis_pixel_BGR_Imagen(imagen, path):
         #impresionA5
         if im2.height>im2.width:
             im2.thumbnail((420, 595))
-            im2.save(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+            im2.save(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
         else:
             im2.thumbnail((595, 420))
-            im2.save(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+            im2.save(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
 
         cantPixA4 = 842*595
         cantPixSobra = cantPixA4 - (im2.height*im2.width)
         porcentajePixBlancosHj2 = cantPixSobra*100/cantPixA4
 
-        im = cv2.imread(os.path.dirname(_file_).replace("Modelo", "Temp") + "/Img.jpeg")
+        im = cv2.imread(os.path.dirname(__file__).replace("Modelo", "Temp") + "/Img.jpeg")
 
         #analisis pixel
         contB = 0
