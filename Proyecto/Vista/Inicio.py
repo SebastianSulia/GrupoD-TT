@@ -38,16 +38,27 @@ class InicioFrame(ttk.Frame):
     def ejecutar(self):
         print(self.url.get())
         info = Modelo.ArchivoService.entrada_archivo(self.url.get())
-        self.detalle.insert("insert", self.escribir_info(info))
-        self.detalle.pack()
+        if(info != None):
+            self.detalle.insert("insert", self.escribir_info(info))
+            self.detalle.pack()
+            self.guardar_en_historial(info)
 
-        self.guardar_en_historial(info)
         self.borrar_path()
 
     def escribir_info(self, info):
-        string = str(datetime.now().date()) + "\n" + "Nombre archivo: " + str(info[0]) + "\n" + "Numero de paginas: " + str(
-            info[1]) + "\n" + "Precio: $" + str(info[2]) + "\n"
-        return string
+        if len(info) == 1:
+            return info[0]
+
+        if len(info) == 3:
+            string = str(datetime.now().date()) + "\n" + "Nombre archivo: " + str(info[0]) + "\n" + "Numero de paginas: " + str(
+                info[1]) + "\n" + "Precio: $" + str(info[2]) + "\n"
+            return string
+
+        elif len(info) == 5:
+            string = str(datetime.now().date()) + "\n" + "Nombre archivo: " + str(info[0]) + "\n" + str(
+                info[1]) + "\n" + "$" + str(info[2]) + "\n" + str(
+                info[3]) + "\n" + "$" + str(info[4])
+            return string
 
     def borrar_path(self):
         self.url.delete(0, tk.END)
