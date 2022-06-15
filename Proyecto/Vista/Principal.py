@@ -23,8 +23,8 @@ class Principal(ttk.Frame):
         self.historial = HistorialFrame(self.notebook)
         self.notebook.add(self.historial, text="Historial", padding=10)
 
-        self.mapa_color = MapaColorFrame(self.notebook)
-        self.notebook.add(self.mapa_color, text="Mapa de color", padding=10)
+        #self.mapa_color = MapaColorFrame(self.notebook)
+        #self.notebook.add(self.mapa_color, text="Mapa de color", padding=10)
 
         self.notebook.pack(padx=10, pady=10)
         self.pack()

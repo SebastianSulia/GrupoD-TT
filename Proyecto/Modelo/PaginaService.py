@@ -1,3 +1,5 @@
+from tkinter import messagebox
+
 import cv2
 import os.path
 from PIL import Image
@@ -24,6 +26,10 @@ def analisis_pixel_BGR(path):
 
 def analisis_pixel_BGR_Imagen(imagen, path):
     with Image.open(path) as imgg:
+        if imgg.width * imgg.height < 842 * 595:
+            messagebox.showinfo(
+                message="La resolución de la imagen es pequeña. No se ha ajustado a página para no perder calidad.",
+                title="Atención")
 
         im1 = imgg
         #impresionA4

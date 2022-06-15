@@ -116,3 +116,37 @@ Precio imagen A4:
 $33
 Precio imagen A5:
 $18
+2022-06-15
+Nombre archivo: 19-FORMACION FOLLETOS BULLYING (6 COPIAS).pdf
+Numero de paginas: 6
+Precio: $158
+
+2022-06-15
+Nombre archivo: cheatsheet-python-A4.pdf
+Numero de paginas: 3
+Precio: $10
+
+2022-06-15
+Nombre archivo: index.jpeg
+Precio imagen A4:
+$3
+Precio imagen A5:
+$3
+2022-06-15
+Nombre archivo: los-10-sonidos-principales-del-perro.jpg
+Precio imagen A4:
+$48
+Precio imagen A5:
+$23
+2022-06-15
+Nombre archivo: los-10-sonidos-principales-del-perro.jpg
+Precio imagen A4:
+$48
+Precio imagen A5:
+$23
+2022-06-15
+Nombre archivo: los-10-sonidos-principales-del-perro.jpg
+Precio imagen A4:
+$48
+Precio imagen A5:
+$23

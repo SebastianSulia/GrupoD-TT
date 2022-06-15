@@ -7,7 +7,7 @@ class HistorialFrame(ttk.Frame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.titulo = tk.Label(self, text="Historial", fg="white")
+        self.titulo = tk.Label(self, text="Historial", fg="black")
         self.titulo.pack()
 
         self.historial = tk.Text(self)
