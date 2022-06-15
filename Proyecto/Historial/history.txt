@@ -59,3 +59,60 @@ Precio imagen A4:
 $42
 Precio imagen A5:
 $21
+2022-06-14
+Nombre archivo: Untitled1.pdf
+Numero de paginas: 2
+Precio: $57
+
+2022-06-15
+Nombre archivo: Municipio.pdf
+Numero de paginas: 1
+Precio: $9
+
+Imagen no compatible
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18
+2022-06-15
+Nombre archivo: Municipio.pdf
+Numero de paginas: 1
+Precio: $9
+
+2022-06-15
+Nombre archivo: Municipio.pdf
+Numero de paginas: 1
+Precio: $9
+
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18
+2022-06-15
+Nombre archivo: imagen2.jpg
+Precio imagen A4:
+$33
+Precio imagen A5:
+$18

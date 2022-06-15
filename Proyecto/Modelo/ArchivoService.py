@@ -1,12 +1,14 @@
 import os
 from Modelo import Archivo
 from Modelo.Config import Config
+from Modelo.Histograma import histograma
 from Modelo.PaginaService import *
 from Modelo.Pagina import *
 from pathlib import Path
 import pdf2image as pdf2image
 from PIL import Image
 from Modelo.Imagen import *
+
 
 
 def entrada_archivo(path):
@@ -24,6 +26,7 @@ def entrada_archivo(path):
                 #print("hola, hola")
                 imagen = Imagen()
                 info_imagen = analizarImagen(path, imagen, config)
+                histograma(path)
                 return info_imagen
             except IOError:
                 mensajeError = ["Imagen no compatible"]

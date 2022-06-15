@@ -21,3 +21,4 @@ class Imagen:
         #print(self.costoA5)
         precio = self.costoA5 * getattr(config, 'ganancia')
         self.precioA5 = int(precio)
+
