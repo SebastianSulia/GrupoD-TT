@@ -4,7 +4,6 @@ from tkinter import ttk
 from Vista.Config import ConfigFrame
 from Vista.Historial import HistorialFrame
 from Vista.Inicio import InicioFrame
-from Vista.MapaColor import MapaColorFrame
 
 
 class Principal(ttk.Frame):
